@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const mapFrame = document.getElementById("mapFrame");
+    const form = document.querySelector(".hero-form form");
 
     // Navbar scroll effect
     window.addEventListener("scroll", () => {
@@ -31,4 +32,30 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         loadMap(defaultLat, defaultLng);
     }
+
+    // Form submission
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+            const res = await fetch("http://localhost:5000/api/issues", {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                alert(data.message);
+                form.reset();
+            } else {
+                alert(data.error || "Failed to raise issue");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Error connecting to server");
+        }
+    });
 });
