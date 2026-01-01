@@ -1,0 +1,192 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: #2c3e50;
+    color: #fff;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav.scrolled {
+    background: #1A252F;
+}
+
+nav .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= MAIN IMAGE SECTION ================= */
+
+.main_container {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+
+    background: url('../images/hero_bg.jpg') center / cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+}
+
+/* Dark overlay */
+.main_container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+
+.main_content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* ================= HERO CARD ================= */
+
+.hero-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px 60px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.hero-box h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-box p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-box button {
+    padding: 10px 25px;
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #fff;
+    color: #27AE60;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background 0.3s;
+}
+
+.hero-box button:hover {
+    background: #ecf0f1;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1rem;
+    background: #32a173;
+    color: #dbefe4;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    background: #27ae60;       /* slightly darker green for hover */
+    color: #ffffff;            /* text becomes fully white on hover */
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-buttons button {
+    padding: 15px 25px;
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #2980B9;
+    color: #fff;
+    cursor: pointer;
+
+    transition: background 0.3s;
+}
+
+.action-buttons button:hover {
+    background: #3498DB;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
