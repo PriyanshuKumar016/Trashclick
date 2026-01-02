@@ -4,8 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trashclick | Raise Issue</title>
+
+    <!-- Existing CSS -->
     <link rel="stylesheet" href="../css/raise_issue.css" />
+
+    <!-- Leaflet CSS (NEW) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    
+    <!-- Leaflet JS (NEW) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Existing JS -->
     <script src="../js/raise_issue.js" defer></script>
+
   </head>
 
   <body>
@@ -20,8 +34,7 @@
     <!-- Main Section -->
     <section class="main_container">
       <div class="main_content">
-
-        <!-- SINGLE HERO BOX CONTAINING FORM + MAP -->
+        <!-- HERO BOX -->
         <div class="hero-box hero-form-map">
           <!-- LEFT: FORM -->
           <div class="form-section">
@@ -54,14 +67,11 @@
           <!-- RIGHT: MAP -->
           <div class="map-section">
             <h3>Issue Location</h3>
-            <iframe
-              id="mapFrame"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+            <!-- Leaflet Map Container (REPLACED iframe) -->
+            <div id="map"></div>
           </div>
         </div>
-
       </div>
     </section>
 
