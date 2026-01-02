@@ -1,0 +1,181 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    color: #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav.scrolled {
+    background: #1a252f;
+}
+
+nav .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= MAIN SECTION ================= */
+.main_container {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    background: url('../images/hero_bg.jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+.main_content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* ================= HERO BOX (FORM + MAP) ================= */
+.hero-box.hero-form-map {
+    display: flex;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.65); /* darker translucent box */
+    padding: 30px 40px;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    flex-wrap: wrap; /* makes it responsive on smaller screens */
+}
+
+/* FORM SECTION */
+.form-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-section label {
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.form-section textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* MAP SECTION */
+.map-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.map-section h3 {
+    margin-bottom: 15px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 320px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* ================= BUTTON ================= */
+.hero-btn {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background: #32a173;
+    color: #dbefe4;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background: #27ae60;
+    color: #ffffff;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .hero-box.hero-form-map {
+        flex-direction: column;
+    }
+}

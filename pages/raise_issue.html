@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trashclick | Raise Issue</title>
+    <link rel="stylesheet" href="../css/raise_issue.css" />
+    <script src="../js/raise_issue.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="brand">Trashclick</div>
+      <ul>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main_container">
+      <div class="main_content">
+
+        <!-- SINGLE HERO BOX CONTAINING FORM + MAP -->
+        <div class="hero-box hero-form-map">
+          <!-- LEFT: FORM -->
+          <div class="form-section">
+            <h2>Raise an Issue</h2>
+
+            <form>
+              <label for="category">Issue Category *</label>
+              <select id="category" required>
+                <option value="">Select category</option>
+                <option value="garbage">Garbage</option>
+                <option value="overflowing">Overflowing Trash</option>
+                <option value="dirty_area">Dirty Area</option>
+                <option value="food_wastage">Food Wastage</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                placeholder="Additional details (optional)"
+              ></textarea>
+
+              <label for="image">Upload Image</label>
+              <input type="file" id="image" accept="image/*" />
+
+              <button type="submit" class="hero-btn">Submit Issue</button>
+            </form>
+          </div>
+
+          <!-- RIGHT: MAP -->
+          <div class="map-section">
+            <h3>Issue Location</h3>
+            <iframe
+              id="mapFrame"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Trashclick. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
