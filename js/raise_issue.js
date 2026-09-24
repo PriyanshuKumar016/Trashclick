@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             () => {
                 // Permission denied → keep default
                 map.setView([defaultLat, defaultLng], 15);
-            }
+            },
 
             //added this to get current location of user
             {
